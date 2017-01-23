@@ -108,9 +108,8 @@ a.social:focus {
 
 
 }
-
-.fa-envelope {
-  font-size: 2.5em;
+.fa-envelope,
+.fa-file-pdf-o {
   font-size: 2em;
 }
 .fa-mobile {
@@ -119,11 +118,7 @@ a.social:focus {
   -webkit-transform: rotate(330deg);
   transform: rotate(330deg);
 }
-.fa-file-pdf-o {
-  font-size: 2.5em;
-  font-size: 2em;
 
-}
 .recent-highlights {
   & > div {
     padding: 2em 0;
@@ -157,6 +152,7 @@ a.social:focus {
   }
 
   .visual {
+    align-items: center;
     padding-left: 0;
     padding-right: 2.5em;
   }
@@ -201,12 +197,15 @@ a.social:focus {
 
 @media screen and (max-width: 768px) {
   .contact { flex-wrap: wrap; }
-  .contact > div {
-
-  }
   .introduction > div {padding:0;}
   .recent-highlights > div {
     flex-wrap: wrap;
+  }
+  .recent-highlights {
+    .visual,
+    .writeup + .visual {
+      padding:0;
+    }
   }
   .recent-highlights .writeup,
   .recent-highlights .visual {
@@ -215,15 +214,14 @@ a.social:focus {
   }
   .recent-highlights .visual {
     order: 1;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: center
+    justify-content: center;
+
+    img {max-width: 360px;}
   }
   .recent-highlights .visual img {
-    max-width: 360px;
+
   }
   .find-me {
-    /* width: 75%; */
     width: 100%;
     box-sizing: border-box;
 
